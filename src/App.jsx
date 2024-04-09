@@ -4,7 +4,7 @@ import Country from './components/Country'
 import States from './components/States'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import CutomerForm from './components/CutomerForm';
-import Login from './components/Login';
+
 
 function App() {
 
@@ -34,8 +34,6 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-      <Route path='/Login' element={<Login />} />
-
         <Route path='/' element={<Country countryData={countryData} setCountryData={setCountryData} />} />
         <Route path='/states/:countryId/:countryName' element={<States countryData={countryData} />} />
         <Route path='/cutomer-form/:countryId/:countryName/:stateName' element={<CutomerForm countryData={countryData} />} />
